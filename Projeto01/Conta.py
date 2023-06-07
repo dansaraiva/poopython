@@ -4,3 +4,13 @@ class Conta:
         self.numero = numero
         self.titular = titular
         
+    @property
+    def getSaldo(self):
+        return self.saldo
+    
+    @getSaldo.setter
+    def setSaldo(self, saldo):
+        if (saldo < 0):
+            print("O saldo não pode ser negativo")
+        else:
+            self._saldo = saldo
